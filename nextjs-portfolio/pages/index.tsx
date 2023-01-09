@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Navbar from '../components/Navbar'
 import Main from '../components/Main'
+import About from '../components/About'
 import { Inter } from '@next/font/google'
 
 
@@ -19,6 +20,7 @@ export default function Home() {
       </Head>
       <Navbar />
       <Main />
+      <About />
       
     </>
   )
