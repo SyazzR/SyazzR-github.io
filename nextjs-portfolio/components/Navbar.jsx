@@ -1,14 +1,16 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 
 const Navbar = () => {
     return (
         <div className='fixed w-full h-20 shadow-xl z-[100]'>
+            {/**Navbar */}
             <div className='flex justify-between items-center w-full h-full pb-2 2xl:px-16'>
                 <Image src="/../public/assets/NR-removebg-preview.png" alt="" width="200" height="50" />
                 <div>
-                    <ul className='hidden md:flex'>
+                    <ul className='hidden md:flex md:mr-2'>
                         <Link href="/">
                             <li className='ml-10 text-sm uppercase hover:border-b'>Home</li>
                         </Link>
@@ -25,9 +27,23 @@ const Navbar = () => {
                             <li className='ml-10 text-sm uppercase hover:border-b'>Contact</li>
                         </Link>
                     </ul>
-                    
+                    <div className='mr-2 md:hidden'>
+                        <AiOutlineMenu size={25} />
+                    </div>
                 </div>
             </div>
+
+            {/**Menu */}
+            <div className='fixed left-0 top-0 w-full h-screen bg-black/70'>
+                <div className='fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500 '>
+                    <div>
+                        <div>
+                            <Image src="/../public/assets/navLogo.png" alt="" width="87" height="35" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     )
 }
