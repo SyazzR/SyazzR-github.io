@@ -3,10 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import propertyImg from '../public/assets/projects/property.jpg'; //use this of didnt want to include width and height
 import ProjectItem from './ProjectItem';
+import property from '../pages/property'
 
 const Projects = () => {
   return (
-    <div className='w-full'>
+    <div id='projects' className='w-full'>
         <div className='max-w-[1240px] mx-auto px-2 py-16'>
             <p className='text-xl tracking-widest uppercase text-[#5651e5]'>Projects</p>
             <h2 className='py-4'>What I've Built</h2>
